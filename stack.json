@@ -65,7 +65,7 @@
                                                         "/bin/bash /tmp/bootchef.sh\n",
 							"cd /root/chef-repo/.chef\n",
 							"$(which knife) node run_list add $HOST_NAME  role['webserver']\n",
-							"$(which chef-client) --daemonize 30\n",
+							"$(which chef-client) --daemonize -i 30 -g root\n",
 
 							"/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
 							"Ref": "WaitHandle"
