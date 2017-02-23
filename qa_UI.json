@@ -1,0 +1,22 @@
+[
+  {
+    "ParameterKey": "ImageID",
+    "ParameterValue": "ami-30697651"
+  }, 
+  {
+    "ParameterKey": "InstanceType",
+    "ParameterValue": "m3.medium"
+  },
+   {
+    "ParameterKey": "KeyName",
+    "ParameterValue": "Training1"
+   },
+  {
+     "ParameterKey": "SubnetId",
+    "ParameterValue": "subnet-4a4a323c"
+  },
+  {
+    "ParameterKey": "InstanceSecurityGroup",
+    "ParameterValue": "sg-18739161"
+  }
+]
