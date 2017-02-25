@@ -60,9 +60,9 @@
 					"Fn::Base64": {
 						"Fn::Join": ["", [
 							"#!/bin/bash -v\n",
-                                                        "curl -o /tmp/bootchef.sh http://10.0.0.228/bootchef.sh\n",
-                                                        "chmod +x /tmp/bootchef.sh\n",
-                                                        "/bin/bash /tmp/bootchef.sh ::PROD_ENV:: ::PROD_COMPONENT::\n",
+                                                        "mkdir -p /opt/chef",
+							"echo text > /opt/chef/envdata",
+							"/bin/bash /tmp/bootchef.sh ::PROD_ENV:: ::PROD_COMPONENT::\n",
 							"/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
 							"Ref": "WaitHandle"
 							}, "'\n"
